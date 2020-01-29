@@ -4,31 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To-do App</title>
     <link
       href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="source/styles.css" />
-    <title>To-do App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <h1 class="title">Stuff I need to do</h1>
 
-    <div class="all-task">
+    <div class="all-tasks">
       <h2 class="task-list-title">My lists</h2>
-      <ul class="task-list">
-        <li class="active-list">Youtube</li>
-        <li>Work</li>
-        <li>Grocery</li>
+      <ul class="task-list" data-lists>
+        <!-- <li class="list-name active-list">Youtube</li>
+        <li class="list-name">Work</li>
+        <li class="list-name">Grocery</li> -->
       </ul>
-      <form action="">
+      <form action="" data-new-list-form>
         <input
           type="text"
           class="new list"
+          data-new-list-input
           placeholder="new list name"
           aria-label="new list name"
         />
-        <button class="btn list" aria-label="create new list">+</button>
+        <button class="btn create" aria-label="create new list">+</button>
       </form>
     </div>
 
@@ -66,16 +68,18 @@
           <form action="">
             <input
               type="text"
-              class="new list"
+              class="new task"
               placeholder="new task name"
               aria-label="new task name"
             />
-            <button class="btn task" aria-label="create new task">+</button>
+            <button class="btn create" aria-label="create new task">+</button>
           </form>
         </div>
         <div class="delete-stuff">
           <button class="btn delete">Clear completed tasks</button>
-          <button class="btn delete">Delete list</button>
+          <button class="btn delete" data-delete-list-button>
+            Delete list
+          </button>
         </div>
       </div>
     </div>
